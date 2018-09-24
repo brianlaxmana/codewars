@@ -7,17 +7,32 @@
 
 <body>
   <h1> HEADLINE JS </h1>
-  <p> lorem ipsum dolor si amet </p>
+  <p> Your job is to return the middle character of the word. </p>
+  <p>Kata.getMiddle("test") should return "es"    </p>
+  <p>Kata.getMiddle("testing") should return "t"    </p>
+  <p>Kata.getMiddle("middle") should return "dd"    </p>
+  <p>Kata.getMiddle("A") should return "A"    </p>
 
   click this button:
+  <!-- 
   <button id="input" onclick="btn_input()">button...!</button>
   <button id="input" onclick="btn_output()">butt hear...!</button>
   <button onclick="alert('Hello wak!')">klik gueh
   <div id="div_input"></div>
-  <div id="div_output"></div>
+  <div id="div_output"></div> 
+  -->
+
+  <!-- middle character -->
+  <button id="mid-char" onclick="getMiddle()">this one (middle character)
+  <div id= "mid-char-output"></div>
+
+  <!-- end of middle character -->
+
 </body>
+
 <!-- ========= JavaScript =================== -->
 <script  src="greeting.js"></script>
+<script  src="middle_character.js"></script>
 <script src="button.js" type="text/javascript"></script>
 
 <script> window.onload = function()
@@ -29,5 +44,16 @@
     console.log(text.length);
     console.log(text.toUpperCase());
   }
+</script>
+
+<script>
+    Test.describe("GetMiddle", function() {
+      Test.it("Tests", function() {
+        Test.assertEquals(getMiddle("test"),"es");
+        Test.assertEquals(getMiddle("testing"),"t");
+        Test.assertEquals(getMiddle("middle"),"dd");
+        Test.assertEquals(getMiddle("A"),"A");
+      });
+    });
 </script>
 </html>
